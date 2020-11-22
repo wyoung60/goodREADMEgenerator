@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateMarkdown = require("./utils/generateMarkdown");
 // array of questions for user
 const questions = [
   { message: "What is your GitHub username? ", name: "userName" },
@@ -30,9 +31,10 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
-  inquirer
-    .prompt(questions)
-    .then((response) => writeToFile("Readme.json", response));
+  inquirer.prompt(questions).then((response) => {
+    const data = generateMarkdown(response);
+    writeToFile("README.md", data);
+  });
 }
 
 // function call to initialize program
