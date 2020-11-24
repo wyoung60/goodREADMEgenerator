@@ -7,7 +7,12 @@ const questions = [
   { message: "What is your email address? ", name: "emailAddy" },
   { message: "What is your project name? ", name: "projectName" },
   { message: "Short description of project: ", name: "projectDescription" },
-  { message: "What kind of license for your project?", name: "license" },
+  {
+    type: "list",
+    message: "What kind of license for your project?",
+    name: "license",
+    choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"],
+  },
   { message: "What command to install dependencies?", name: "npmDepend" },
   { message: "What command should be run for tests?", name: "testCommand" },
   {
@@ -22,10 +27,8 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-  console.log(fileName);
-  console.log(data);
-  fs.writeFile(fileName, JSON.stringify(data), (err) =>
-    err ? console.log(err) : console.log("Success!")
+  fs.writeFile(fileName, data, (err) =>
+    err ? console.log(err) : console.log("Generating README..")
   );
 }
 
