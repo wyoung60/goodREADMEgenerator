@@ -30,5 +30,5 @@ Licensed under MIT license.
 
 ## Links
 
-https://wyoung60.github.io/goodREADMEgenerator/</br
+https://wyoung60.github.io/goodREADMEgenerator/</br>
 https://github.com/wyoung60/goodREADMEgenerator
