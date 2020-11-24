@@ -1,6 +1,7 @@
 // function to generate markdown for README
+//Imports data from promise in index.js
 function generateMarkdown(data) {
-  console.log(data.license);
+  //Get license image based on selection
   let licenseTag = "";
   if (data.license === "MIT") {
     licenseTag =
@@ -17,7 +18,7 @@ function generateMarkdown(data) {
   } else {
     licenseTag = "";
   }
-  console.log(licenseTag);
+  //Generates and returns README file
   return `# ${data.projectName}
 
 ## Description
@@ -58,13 +59,13 @@ Licensed under ${data.license} license.
 
 ${data.contributeInfo}
 
-## Test
+## Tests
 
 Use ${data.testCommand} command to test repo.
 
 ## Links
 
-https://${data.userName}.github.io/{add repo name here}
+https://${data.userName}.github.io/{add repo name here} </br>
 https://github.com/${data.userName}/{add repo name here}
 
 ## Questions
