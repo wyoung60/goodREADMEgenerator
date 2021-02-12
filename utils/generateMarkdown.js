@@ -33,6 +33,8 @@ ${licenseTag}
 
 * [Usage](#usage)
 
+* [Screenshot](#screenshot)
+
 * [License](#license)
 
 * [Contributing](#contributing)
@@ -51,6 +53,8 @@ Install necessary dependencies with ${data.npmDepend} command.
 
 ${data.repoInfo}
 
+## Screenshot
+
 ## License
 
 Licensed under ${data.license} license.
@@ -65,8 +69,8 @@ Use ${data.testCommand} command to test repo.
 
 ## Links
 
-https://${data.userName}.github.io/{add repo name here} </br>
-https://github.com/${data.userName}/{add repo name here}
+https://${data.userName}.github.io/${data.projectName} </br>
+https://github.com/${data.userName}/${data.projectName}
 
 ## Questions
 
